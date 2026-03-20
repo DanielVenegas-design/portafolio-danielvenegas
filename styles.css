@@ -1,0 +1,822 @@
+/* ============================================
+   Daniel Venegas — Portfolio Styles
+   ============================================ */
+
+/* ---------- Reset & Base ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #262626;
+  color: #EDE6D6;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Typography ---------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 500;
+}
+
+/* ---------- Scrollbar ---------- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #1a1a1a; }
+::-webkit-scrollbar-thumb { background: #555; }
+
+::selection {
+  background: #EDE6D6;
+  color: #262626;
+}
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(38, 38, 38, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid #333;
+}
+
+.navbar-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.navbar-name {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.25rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.navbar-subtitle {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .navbar-subtitle { display: block; }
+  .navbar-inner { height: 72px; }
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: none;
+  gap: 2rem;
+}
+
+.nav-links.active {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 64px;
+  left: 0;
+  width: 100%;
+  background: #262626;
+  border-bottom: 1px solid #333;
+  padding: 1.5rem;
+  gap: 1rem;
+}
+
+@media (min-width: 1024px) {
+  .nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    border: none;
+    padding: 0;
+  }
+  .menu-toggle { display: none !important; }
+}
+
+.nav-links a {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: #EDE6D6; }
+
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 1px;
+  background: #EDE6D6;
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.logo {
+  height: 32px;
+  width: auto;
+  transition: opacity 0.3s;
+}
+
+.hero-logo {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  opacity: 0.05;
+  z-index: 1;
+}
+
+.logo:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #EDE6D6;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ============================================
+   HERO
+   ============================================ */
+.hero {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 72px;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.85), transparent 40%),
+    linear-gradient(to left, rgba(0,0,0,0.85), transparent 40%),
+    rgba(38,38,38,0.6);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 2rem 5rem;
+  padding-top: 120px;
+}
+
+@media (min-width: 1024px) {
+  .hero-content { padding: 4rem 4rem 8rem; }
+}
+
+.hero-subtitle {
+  font-style: italic;
+  font-family: 'Inter', sans-serif;
+  color: #888;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.08em;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeUp 0.8s 0.5s forwards;
+}
+
+.hero-title {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.9;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.8s 0.7s forwards;
+}
+
+.hero-slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+  transform: scale(1.05);
+  transition: opacity 1.5s ease, transform 6s ease;
+  inset: 0;
+  z-index: 0;
+}
+
+.hero-slider img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1.5s ease, transform 6s ease;
+  
+}
+
+.hero-slider img.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ============================================
+   WORKS GRID
+   ============================================ */
+.works {
+  padding: 5rem 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .works { padding: 8rem 4rem; }
+}
+
+.works-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.works-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.works-title {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.works-count {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .works-count { display: block; }
+}
+
+/* Grid */
+.works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .works-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+/* Card */
+.work-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  aspect-ratio: 4 / 3;
+}
+
+.work-card.work-large {
+  aspect-ratio: 21 / 9;
+}
+
+@media (min-width: 768px) {
+  .work-card.work-large { grid-column: span 2; }
+}
+
+.work-card img {
+  transition: transform 0.7s ease;
+}
+
+.work-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Overlay on hover */
+.work-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(38, 38, 38, 0);
+  transition: background 0.5s;
+}
+
+.work-card:hover::after {
+  background: rgba(38, 38, 38, 0.5);
+}
+
+/* Info */
+.work-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.5rem 2rem;
+  z-index: 2;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.work-card:hover .work-info {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.work-category {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.work-name {
+  font-size: 1.25rem;
+  margin-top: 0.25rem;
+}
+
+/* Index number */
+.work-index {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  color: rgba(237, 230, 214, 0.2);
+  z-index: 2;
+  transition: color 0.5s;
+}
+
+.work-card:hover .work-index {
+  color: rgba(237, 230, 214, 0.7);
+}
+
+/* ============================================
+   ABOUT
+   ============================================ */
+.about {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  border-top: 1px solid #333;
+}
+
+@media (min-width: 1024px) {
+  .about { padding: 8rem 4rem; }
+}
+
+.about-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1.5rem;
+}
+
+.about-name {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1.05;
+  margin-bottom: 2rem;
+}
+
+.about-text {
+  font-style: italic;
+  color: #888;
+  font-size: 0.9rem;
+  max-width: 500px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.7;
+}
+
+.about-link {
+  display: inline-block;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #EDE6D6;
+  padding-bottom: 4px;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.about-link:hover {
+  color: #888;
+  border-color: #888;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  border-top: 1px solid #333;
+  padding: 3rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: #888;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-socials a {
+  font-size: 0.7rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #888;
+  transition: color 0.3s;
+}
+
+.footer-socials a:hover { color: #EDE6D6; }
+
+/* ============================================
+   SCROLL ANIMATIONS
+   ============================================ */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================
+   EDITORIAL PAGE
+========================================= */
+
+/* HERO */
+.editorial-hero {
+  height: 80vh;
+  background: url('img/editorial-cover.jpg') center/cover no-repeat;
+  position: relative;
+}
+
+.editorial-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(38,38,38,0.75);
+}
+
+.editorial-content {
+  position: relative;
+  z-index: 2;
+  padding: 120px 1.5rem 4rem;
+}
+
+.editorial-subtitle {
+  color: #888;
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+}
+
+.editorial-title {
+  font-size: clamp(3rem, 8vw, 6rem);
+}
+
+/* INTRO */
+.editorial-intro {
+  max-width: 800px;
+  margin: 5rem auto;
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+/* PROYECTOS */
+.project {
+  padding: 6rem 1.5rem;
+  border-top: 1px solid #333;
+}
+
+.project-header h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* GRID */
+.project-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .project-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+
+  .project-grid img:nth-child(1) {
+    grid-row: span 2;
+  }
+}
+
+/* IMG */
+.project-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.project-grid img:hover {
+  transform: scale(1.03);
+}
+
+/* TEXTO */
+.project-text {
+  max-width: 700px;
+  margin-top: 2rem;
+  color: #888;
+  line-height: 1.7;
+}
+
+/* ============================================
+   SECCIÓN PROYECTO / GRID DE GALERÍA
+   ============================================ */
+
+.project-foto {
+  padding: 0; /* Sin relleno para que la galería toque los bordes si deseas */
+  max-width: 1400px; /* Ajusta según el ancho de tu navbar */
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.project-grid-foto {
+  display: grid;
+  /* Crea 3 columnas de igual tamaño */
+  grid-template-columns: repeat(3, 1fr); 
+  /* Espacio entre fotos (gap). Ponlo en 0 si quieres que estén pegadas */
+  gap: 10px; 
+  padding: 10px;
+}
+
+.project-grid-foto img {
+  width: 100%;
+  height: 450px; /* Altura fija para que todas se vean parejas como en tu ejemplo */
+  object-fit: cover; /* Recorta la imagen para llenar el cuadro sin deformarse */
+  display: block;
+  transition: opacity 0.3s ease;
+  filter: brightness(0.9); /* Un toque sutil de estilo */
+}
+
+.project-grid-foto img:hover {
+  opacity: 0.8;
+  filter: brightness(1);
+  cursor: pointer;
+}
+
+/* ============================================
+   RESPONSIVE (Para celulares)
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .project-grid-foto {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas en tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid-foto {
+    grid-template-columns: 1fr; /* 1 columna en móviles */
+    gap: 5px;
+    padding: 5px;
+  }
+  
+  .project-grid-foto img {
+    height: 350px; /* Un poco más bajas en móvil */
+  }
+}
+
+/* --- Lightbox con Navegación --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 3000;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.95);
+  backdrop-filter: blur(10px);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active { display: flex; }
+
+.lightbox-content {
+  max-width: 85%;
+  max-height: 80vh;
+  object-fit: contain;
+  border: 1px solid rgba(237, 230, 214, 0.2);
+  transition: transform 0.3s ease;
+}
+
+/* Botones de control */
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  background: none;
+  border: none;
+  color: #EDE6D6;
+  font-size: 2.5rem;
+  cursor: pointer;
+  padding: 20px;
+  transition: opacity 0.3s, transform 0.2s;
+  z-index: 3100;
+}
+
+.lightbox-prev { left: 5%; }
+.lightbox-next { right: 5%; }
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  opacity: 0.7;
+  transform: scale(1.1);
+}
+
+.close-lightbox {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: #EDE6D6;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 3200;
+}
+
+.lightbox-caption {
+  position: absolute;
+  bottom: 30px;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .lightbox-prev, .lightbox-next { font-size: 1.5rem; padding: 10px; }
+  .lightbox-content { max-width: 95%; }
+}
+
+/* --- Solución Scroll Horizontal y Rejilla de Logos --- */
+.collab-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Se ajusta solo según el espacio */
+    gap: 2rem; 
+    margin-top: 5rem; 
+    align-items: center;
+    max-width: 100%; /* Evita que se salga del contenedor */
+    padding: 0 1rem;
+}
+
+.collab-grid img {
+    max-height: 60px; /* Un poco más pequeños para móvil */
+    width: auto; 
+    max-width: 100%; /* No permite que la imagen sea más ancha que su columna */
+    justify-self: center;
+    object-fit: contain;
+}
+
+@media (min-width: 768px) {
+    .collab-grid {
+        grid-template-columns: repeat(3, 1fr); /* En escritorio mantiene las 3 columnas */
+    }
+    .collab-grid img {
+        max-height: 80px;
+    }
+}
+
+/* Regla extra para asegurar que nada cause scroll horizontal */
+body, html {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* Fuerza a que las dos imágenes ocupen el 50% cada una */
+.project-grid-two {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Crea dos columnas iguales */
+    gap: 1.5rem; /* Espacio entre las fotos */
+    width: 100%;
+}
+
+.project-grid-two img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 4 / 3; /* Esto asegura que ambas tengan la misma altura exacta */
+}
+
+/* Ajuste para celulares (una debajo de la otra) */
+@media (max-width: 768px) {
+    .project-grid-two {
+        grid-template-columns: 1fr;
+    }
+}

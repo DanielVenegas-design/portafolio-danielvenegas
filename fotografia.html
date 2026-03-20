@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fotografía — Daniel Venegas</title>
+
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="img/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <!-- Envuelve el logo y el texto en un enlace hacia index.html -->
+      <a href="index.html" class="navbar-brand" style="text-decoration: none; color: inherit;">
+        <img src="img/mi logo.png" class="logo">
+        <div class="brand-text">
+          <span class="navbar-name">DANIEL VENEGAS</span>
+          <span class="navbar-subtitle">Diseño gráfico y digital</span>
+        </div>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="editorial.html">Editorial</a></li>
+        <li><a href="fotografia.html">Fotografía</a></li>
+        <li><a href="ux-ui.html">UX/UI</a></li>
+        <li><a href="marca.html">Marcas</a></li>
+        <li><a href="ilustracion.html">Ilustración</a></li>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+<!-- ==================== HERO ==================== -->
+<section class="editorial-hero">
+  <div class="editorial-overlay"></div>
+  <div class="editorial-content">
+    <p class="editorial-subtitle">Portafolio - Categoría</p>
+    <h1 class="editorial-title">Fotografía</h1>
+  </div>
+</section>
+
+<!-- ==================== INTRO ==================== -->
+<section class="editorial-intro">
+  <p>
+    La fotografía es el arte de capturar la luz y el tiempo en una sola imagen. 
+    A través de mi lente, busco explorar composiciones, texturas y momentos 
+    que cuentan historias sin necesidad de palabras.
+  </p>
+</section>
+
+<!-- ==================== PROYECTO 1: Retrato y Composición ==================== -->
+<section class="project-foto">
+
+  <div class="project-grid-foto">
+    <img src="img/DSC9851.jpg" alt="El eco del océano">
+    <img src="img/DSC9876.jpg" alt="El Último Resquicio">
+    <img src="img/DSC0244.jpg" alt="Fuera de Cuadro">
+    <img src="img/Notas.jpg" alt="La frecuencia del silencio">
+    <img src="img/Violin.jpg" alt="Almas en Resonancia">
+    <img src="img/DSC0099.jpg" alt="Cristal sobre Carmesí">
+    <img src="img/DSC4953.jpg" alt="Pequeño Universo">
+    <img src="img/DSC4950.jpg" alt="Sombras de Terciopelo">
+    <img src="img/DSC4952.jpg" alt="Recuerdo Difuso">
+    <img src="img/DSC0241.jpg" alt="Simetría de lo Cotidiano">
+    <img src="img/vaso.jpg" alt="Transparencia en Caos">
+    <img src="img/DSC0140.jpg" alt="Servicio Impecable">
+    <img src="img/DSC_0069.jpg" alt="La Fotógrafa Oculta">
+    <img src="img/DSC4949.jpg" alt="Ecos en la Oscuridad">
+    <img src="img/DSC9864.jpg" alt="Memento Mori">
+  </div>
+
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <p class="footer-copy">© 2026 Daniel Venegas</p>
+  <div class="footer-socials">
+    <a href="https://www.behance.net/danielvenegasruiz" target="_blank" rel="noopener noreferrer">Behance</a>
+    <a href="https://www.instagram.com/daniel_7w7_/#" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- Contenedor del Lightbox con Flechas -->
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  
+  <!-- Botones de Navegación -->
+  <button class="lightbox-prev" id="prevBtn">&#10094;</button>
+  <img class="lightbox-content" id="lightbox-img">
+  <button class="lightbox-next" id="nextBtn">&#10095;</button>
+  
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

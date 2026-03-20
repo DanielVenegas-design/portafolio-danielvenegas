@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="author" content="Daniel Venegas">
+  <title>Daniel Venegas | Portafolio de Diseño</title>
+  <meta name="description" content="Portafolio de Daniel Venegas — Diseñador gráfico y digital especializado en editorial, branding y UX/UI." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="img/favicon2.png" type="image/x-icon">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon2.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon2.png">
+</head>
+</head>
+<body>
+
+  <!-- ==================== NAVBAR ==================== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <!-- Envuelve el logo y el texto en un enlace hacia index.html -->
+      <a href="index.html" class="navbar-brand" style="text-decoration: none; color: inherit;">
+        <img src="img/mi logo.png" class="logo">
+        <div class="brand-text">
+          <span class="navbar-name">DANIEL VENEGAS</span>
+          <span class="navbar-subtitle">Diseño gráfico y digital</span>
+        </div>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="editorial.html">Editorial</a></li>
+        <li><a href="fotografia.html">Fotografía</a></li>
+        <li><a href="ux-ui.html">UX/UI</a></li>
+        <li><a href="marca.html">Marcas</a></li>
+        <li><a href="ilustracion.html">Ilustración</a></li>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </div>
+</nav>
+
+
+  <!-- ==================== HERO ==================== -->
+  <!--slider-->
+  <section class="hero" id="hero">
+    <img src="img/mi logo.png" class="hero-logo">
+    <div class="hero-slider">
+      <img src="img/periodico-fondo 2.png" class="active">
+      <img src="img/Editorial Mockup.jpg">
+      <img src="img/mockup 1_newslatter.jpg">
+    </div>
+    <!--overlay-->
+    <div class="hero-overlay"></div>
+    <!--contenido-->
+    <div class="hero-content">
+      <p class="hero-subtitle">Portafolio 2023 — 2026</p>
+      <h1 class="hero-title">
+        Diseño que<br />
+        comunica,<br />
+        estructura<br />
+        y conecta
+      </h1>
+    </div>
+  </section>
+
+  <!-- ==================== TRABAJOS ==================== -->
+  <section class="works" id="trabajos">
+    <div class="works-header">
+      <div>
+        <p class="works-label">Selección</p>
+        <h2 class="works-title">Últimos trabajos</h2>
+      </div>
+      <span class="works-count">04 Proyectos</span>
+    </div>
+
+    <div class="works-grid">
+      <!-- Proyecto 1 — grande -->
+      <a href="#" class="work-card work-large">
+        <img src="img/periodico.jpg" alt="Periódico Digital" />
+        <div class="work-info">
+          <span class="work-category">Editorial</span>
+          <h3 class="work-name">Periódico</h3>
+        </div>
+        <span class="work-index">01</span>
+      </a>
+
+      <!-- Proyecto 2 — pequeño -->
+      <a href="#" class="work-card">
+        <img src="img/vct.fondo.png" alt="VCT América" />
+        <div class="work-info">
+          <span class="work-category">UX/UI</span>
+          <h3 class="work-name">VCT América</h3>
+        </div>
+        <span class="work-index">02</span>
+      </a>
+
+      <!-- Proyecto 3 — pequeño -->
+      <a href="#" class="work-card">
+        <img src="img/DON SIMON LOGO.jpg" alt="Saverio Arquitecto" />
+        <div class="work-info">
+          <span class="work-category">Branding</span>
+          <h3 class="work-name">Don simon</h3>
+        </div>
+        <span class="work-index">03</span>
+      </a>
+
+      <!-- Proyecto 4 — grande -->
+      <a href="#" class="work-card work-large">
+        <img src="img/barresama-fondo.png" alt="Luxury Brand Identity" />
+        <div class="work-info">
+          <span class="work-category">Marcas</span>
+          <h3 class="work-name">Barresama Inmobiliaria</h3>
+        </div>
+        <span class="work-index">04</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT PREVIEW ==================== -->
+  <section class="about" id="about">
+    <p class="about-label">Sobre mí</p>
+    <h2 class="about-name">Daniel<br />Venegas</h2>
+    <p class="about-text">
+      Diseñador gráfico y digital enfocado en editorial, UX/UI y branding.
+      Creo piezas que comunican con claridad, estructura y estética contemporánea.
+    </p>
+    <a href="about.html" class="about-link">Ver más →</a>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+  <p class="footer-copy">© 2026 Daniel Venegas</p>
+  <div class="footer-socials">
+    <a href="https://www.behance.net/danielvenegasruiz" target="_blank" rel="noopener noreferrer">Behance</a>
+    <a href="https://www.instagram.com/daniel_7w7_/#" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilustración — Daniel Venegas</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com" rel="stylesheet" />
+  <link rel="icon" href="img/favicon2.png" type="image/x-icon">
+</head>
+
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand" style="text-decoration: none; color: inherit;">
+        <img src="img/mi logo.png" class="logo">
+        <div class="brand-text">
+          <span class="navbar-name">DANIEL VENEGAS</span>
+          <span class="navbar-subtitle">Diseño gráfico y digital</span>
+        </div>
+      </a>
+      
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="editorial.html">Editorial</a></li>
+        <li><a href="fotografia.html">Fotografía</a></li>
+        <li><a href="ux-ui.html">UX/UI</a></li>
+        <li><a href="marca.html">Marcas</a></li>
+        <li><a href="ilustracion.html">Ilustración</a></li>
+        <li><a href="about.html">Bio</a></li>
+      </ul>
+    </div>
+</nav>
+
+<!-- ==================== HERO ==================== -->
+<section class="editorial-hero">
+  <div class="editorial-overlay"></div>
+  <div class="editorial-content">
+    <p class="editorial-subtitle">Portafolio - Categoría</p>
+    <h1 class="editorial-title">Ilustración</h1>
+  </div>
+</section>
+
+<!-- ==================== INTRO ==================== -->
+<section class="editorial-intro">
+  <p>
+    Exploración visual a través del dibujo digital y tradicional. 
+    Cada pieza busca capturar personajes, conceptos y narrativas 
+    mediante el uso de la línea, el color y la composición.
+  </p>
+</section>
+
+<!-- ==================== GALERÍA DE ILUSTRACIÓN ==================== -->
+<section class="project-foto">
+  <div class="project-grid-foto">
+    <!-- Usamos el grid de fotografía para mantener consistencia visual -->
+    <img src="img/Diana.jpg" alt="Ilustración Diana">
+    <img src="img/JAck.jpg" alt="Ilustración Jack">
+    <img src="img/TRaje.jpg" alt="Ilustración Traje">
+    <img src="img/Yo.jpg" alt="Autorretrato">
+    <img src="img/dibujo 1.jpg" alt="Autorretrato">
+    <img src="img/dibujo 2.jpg" alt="Duo dinamico">
+    <img src="img/dibujo 3.jpg" alt="Autorretrato">
+    <img src="img/dibujo 4.jpg" alt="Canasta de escritores">
+    <img src="img/Crystel.jpg" alt="Ilustración Crystel">
+    <img src="img/WhatsApp Image 2025-03-30 at 4.26.54 PM.jpeg" alt="Ilustración Taide">
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="footer">
+  <p class="footer-copy">© 2026 Daniel Venegas</p>
+  <div class="footer-socials">
+    <a href="https://www.behance.net/danielvenegasruiz" target="_blank" rel="noopener noreferrer">Behance</a>
+    <a href="https://www.instagram.com/daniel_7w7_/#" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+  </div>
+</footer>
+
+<!-- Contenedor del Lightbox con Flechas -->
+<div id="lightbox" class="lightbox">
+  <span class="close-lightbox">&times;</span>
+  
+  <!-- Botones de Navegación -->
+  <button class="lightbox-prev" id="prevBtn">&#10094;</button>
+  <img class="lightbox-content" id="lightbox-img">
+  <button class="lightbox-next" id="nextBtn">&#10095;</button>
+  
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
