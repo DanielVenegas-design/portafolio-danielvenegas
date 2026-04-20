@@ -3,34 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="author" content="Daniel Venegas">
-  <title>Daniel Venegas | Portafolio de Diseño</title>
-  <meta name="description" content="Portafolio de Daniel Venegas — Diseñador gráfico y digital especializado en editorial, branding y UX/UI." />
-  
-  <!-- ETIQUETAS PARA EL PREVIEW EN REDES SOCIALES (OPEN GRAPH) -->
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://danielvenegas-design.github.io/portafolio-danielvenegas/">
-  <meta property="og:title" content="Daniel Venegas | Portafolio de Diseño">
-  <meta property="og:description" content="Diseñador gráfico y digital especializado en editorial, branding y UX/UI. Explora mi trabajo 2023-2026.">
-  <meta property="og:image" content="https://danielvenegas-design.github.io/portafolio-danielvenegas/img/preview.png">
 
-  <!-- ETIQUETAS PARA TWITTER -->
+  <title>Daniel Venegas | Portafolio de Diseño</title>
+
+  <meta name="description" content="Portafolio de Daniel Venegas — Diseñador gráfico especializado en identidad visual, editorial y UX/UI.">
+  <meta name="author" content="Daniel Venegas">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://danielvenegas-design.github.io/">
+  <meta property="og:title" content="Daniel Venegas | Portafolio de Diseño">
+  <meta property="og:description" content="Diseñador gráfico y digital especializado en editorial, branding y UX/UI. Explora mi trabajo.">
+  <meta property="og:image" content="https://danielvenegas-design.github.io/img/mi%20logo.png">
+  <meta property="og:site_name" content="Daniel Venegas Portfolio">
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Daniel Venegas | Portafolio">
   <meta name="twitter:description" content="Diseño que comunica, estructura y conecta.">
-  <meta name="twitter:image" content="https://danielvenegas-design.github.ioimg/mi%20logo.png">
-  
+  <meta name="twitter:image" content="https://danielvenegas-design.github.io/img/mi%20logo.png">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-  <link rel="icon" href="img/favicon2.png" type="image/x-icon">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon2.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/favicon2.png">
-</head>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/favicon2.png">
 </head>
 <body>
 
@@ -46,7 +48,7 @@
         </div>
       </a>
       
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links" id="navLinks">
@@ -64,11 +66,11 @@
   <!-- ==================== HERO ==================== -->
   <!--slider-->
   <section class="hero" id="hero">
-    <img src="img/mi logo.png" class="hero-logo">
+    <img src="img/mi logo.png" loading="lazy" class="hero-logo">
     <div class="hero-slider">
-      <img src="img/periodico-fondo-3.jpg" class="active">
-      <img src="img/Editorial Mockup.jpg">
-      <img src="img/mockup 1_newslatter.jpg">
+      <img src="img/periodico-fondo 2.png" loading="lazy" class="active">
+      <img src="img/Editorial Mockup.jpg" loading="lazy"> 
+      <img src="img/mockup 1_newslatter.jpg" loading="lazy">
     </div>
     <!--overlay-->
     <div class="hero-overlay"></div>
@@ -97,7 +99,7 @@
     <div class="works-grid">
       <!-- Proyecto 1 — grande -->
       <a href="#" class="work-card work-large">
-        <img src="img/periodico.jpg" alt="Periódico Digital" />
+        <img src="img/periodico.jpg" loading="lazy" alt="Periódico Digital" />
         <div class="work-info">
           <span class="work-category">Editorial</span>
           <h3 class="work-name">Periódico</h3>
@@ -107,7 +109,7 @@
 
       <!-- Proyecto 2 — pequeño -->
       <a href="#" class="work-card">
-        <img src="img/vct.fondo.png" alt="VCT América" />
+        <img src="img/vct.fondo.png" loading="lazy" alt="VCT América" />
         <div class="work-info">
           <span class="work-category">UX/UI</span>
           <h3 class="work-name">VCT América</h3>
@@ -117,7 +119,7 @@
 
       <!-- Proyecto 3 — pequeño -->
       <a href="#" class="work-card">
-        <img src="img/DON SIMON LOGO mockup 2.jpg" alt="Don simon" />
+        <img src="img/DON SIMON LOGO mockup 2.jpg" loading="lazy" alt="Don simon" />
         <div class="work-info">
           <span class="work-category">Branding</span>
           <h3 class="work-name">Don simon</h3>
@@ -127,7 +129,7 @@
 
       <!-- Proyecto 4 — grande -->
       <a href="#" class="work-card work-large">
-        <img src="img/barresama-fondo.png" alt="Barresama Inmobiliaria" />
+        <img src="img/barresama-fondo.png" loading="lazy" alt="Barresama Inmobiliaria" />
         <div class="work-info">
           <span class="work-category">Marcas</span>
           <h3 class="work-name">Barresama Inmobiliaria</h3>
