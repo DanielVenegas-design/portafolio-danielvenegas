@@ -556,7 +556,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* HERO */
 .editorial-hero {
-  height: 80vh;
+  height: 60vh;
   background: url('img/editorial-cover.jpg') center/cover no-repeat;
   position: relative;
 }
@@ -820,3 +820,4 @@ body, html {
         grid-template-columns: 1fr;
     }
 }
+
