@@ -495,6 +495,178 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ============================================
+   BIO AWARD
+============================================ */
+
+.bio-award {
+  margin-top: 6rem;
+  padding-top: 4rem;
+  border-top: 1px solid #333;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .bio-award {
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+.bio-award-image {
+  text-align: center;
+}
+
+.bio-award-image img {
+  width: 100%;
+  max-width: 320px;
+  object-fit: contain;
+
+  filter: drop-shadow(0 12px 40px rgba(0,0,0,0.35));
+
+  transition: transform 0.4s ease;
+}
+
+.bio-award-image img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+.bio-award-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+
+  margin-bottom: 1rem;
+}
+
+.bio-award-title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  line-height: 0.95;
+
+  margin-bottom: 1.5rem;
+}
+
+.bio-award-text {
+  color: #888;
+  line-height: 1.8;
+
+  max-width: 700px;
+
+  margin-bottom: 2rem;
+}
+
+.bio-award-link {
+  display: inline-block;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #EDE6D6;
+  padding-bottom: 4px;
+
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.bio-award-link:hover {
+  color: #888;
+  border-color: #888;
+}
+
+/* ============================================
+   CENEVAL AWARD
+============================================ */
+
+.award {
+  padding: 6rem 1.5rem;
+  border-top: 1px solid #333;
+  border-bottom: 1px solid #333;
+  background: #202020;
+}
+
+.award-content {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .award-content {
+    grid-template-columns: 320px 1fr;
+  }
+}
+
+.award-image img {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+  object-fit: contain;
+
+  filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+
+  transition: transform 0.4s ease;
+}
+
+.award-image img:hover {
+  transform: translateY(-6px);
+}
+
+.award-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #888;
+  margin-bottom: 1rem;
+}
+
+.award-title {
+  font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+  line-height: 0.95;
+  margin-bottom: 1.5rem;
+}
+
+.award-text {
+  max-width: 650px;
+  color: #888;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.award-link {
+  display: inline-block;
+
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+
+  border-bottom: 1px solid #EDE6D6;
+  padding-bottom: 4px;
+
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.award-link:hover {
+  color: #888;
+  border-color: #888;
+}
+
+.award-info {
+  border-left: 1px solid rgba(237,230,214,0.15);
+  padding-left: 3rem;
+}
+
+.award-image img:hover {
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* ============================================
    FOOTER
    ============================================ */
 .footer {
@@ -820,4 +992,3 @@ body, html {
         grid-template-columns: 1fr;
     }
 }
-
